@@ -40,3 +40,16 @@
 .read-the-docs {
   color: #888;
 }
+
+.wrapper {
+  width: auto;
+  height: auto;
+  background-color: 'fff';
+  display: flex;
+}
+
+.container {
+border: 2px solid #fff;
+height: fit-content;
+width: 30vw;
+}
