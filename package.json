@@ -2,7 +2,7 @@
   "name": "todolist",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://{username}.github.io/"
+  "homepage": "https://uaeboss.github.io/todolist",
   "type": "module",
   "scripts": {
     "dev": "vite",
