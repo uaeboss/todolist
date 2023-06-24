@@ -1,137 +1,146 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+html {
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
-  margin: 0;
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-  vertical-align: middle;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-}
-
-.wrapper {
-  width: auto;
-  height: auto;
-  background-color: "fff";
-  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background: #333333;
+  color: white;
+  padding: 0 30px;
   box-sizing: border-box;
-}
-
-.container {
-  border: 2px solid #fff;
-  height: fit-content;
-  min-height: 300px;
-  width: 35vw;
-  box-sizing: border-box;
-}
-
-input {
-  height: 35px;
-  width: 300px;
-  margin-right: 10px;
-  padding-left: 10px;
-}
-
-fieldset {
-  min-height: 180px;
 }
 
 .block {
   text-align: center;
+  background: #cccccc;
   border-radius: 3px;
   padding: 3%;
-  color: white;
+  color: black;
   margin: 2% auto;
-  width: 95%;
-  height: fit-content;
+  width: 500px;
+}
+.block > h2 {
+  text-align: center;
 }
 
-/* .List {
-display: flex;
-justify-content: flex-start;
-} */
-
-ul {
-  margin: 15px 0 0 0;
-  padding: 0;
+button {
+  background: #f2f2f2;
+  color: #1a1a1a;
+  font-weight: bold;
+  margin: 0 5px 0 5px;
+  cursor: pointer;
+  border: 1px solid black;
+  border-radius: 5px;
+  height: 40px;
+  padding-bottom: 2px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-ul li {
-  padding: 0;
-  margin: 0;
+.wrapper {
+  height: 100vh;
+  width: 100vw;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 
-.closeButton {
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: transparent;
-  cursor: pointer;
-  transition: border-color 0.25s;
+.container {
+  width: 600px;
+  height: fit-content;
+}
+
+input.add {
+  width: 350px;
+  height: 40px;
+  font-size: 1.2em;
+  background-color: #f2f2f2;
+  border: none;
+  border-radius: 5px;
+  margin: 0;
+  padding: 0 0 0 10px;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  justify-content: flex-start;
+  margin: 0;
+  padding: 0;
+}
+
+.completed {
+  text-decoration: line-through;
+}
+
+.task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 600px;
+  height: 55px;
+  margin-bottom: 5px;
+  border-bottom: 2px solid #f2f2f2;
+}
+
+.taskdone {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 600px;
+  height: 55px;
+  background-color: #333333;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+p {
   vertical-align: middle;
 }
 
+input.check {
+  height: 25px;
+  width: 25px;
+  margin: 0 15px 0 10px;
+}
+
+.left {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  align-items: center;
+}
+
+.right {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
+  align-items: center;
+}
+
+fieldset {
+  margin-bottom: 15px;
+  border-radius: 5px;
+  color: #f2f2f2;
+  height: fit-content;
+}
+
+.inputflex {
+  height: 60px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.inputnonvis {
+  background-color: transparent;
+  border: none;
+  font-size: 1em;
+  color: #f2f2f2;
+}

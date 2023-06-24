@@ -10,35 +10,3 @@ body {
   padding: 2rem;
   text-align: center;
 }
-
-.buttons {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  padding: 15px 0 15px 0;
-}
-
-.todo {
-  min-height: 100px;
-  display: flex;
-  justify-content: flex-start;
-  padding-left: 54px;
-}
-
-.formblock {
-  height: 100px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-}
-
-.card {
-  background-color: #ebebeb;
-  border-radius: 0.5em;
-  padding: 5px;
-  height: fit-content;
-  margin: 1rem 0;
-  color: #1a1a1a;
-}
