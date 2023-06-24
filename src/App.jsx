@@ -1,56 +1,24 @@
-import "./App.css";
+import "./index.css";
 import { useState } from "react";
+import DisplayToDos from "./components/DisplayToDos";
+import Form from "./components/Form";
 
-function App() {
+export default function App() {
 
-const [list, setList] = useState([]);
-const [input, setInput] = useState('');
-
-
-const addTodo = (todo) => {
-  const newTodo = {
-    id: Math.random(),
-    todo: todo,
-  }
-
-  setList([...list, newTodo])
-
-  setInput('');
-};
-
-const deleteTodo = (id) => {
-  const newList = list.filter((todo) => todo.id !== id);
-
-  setList(newList);
-}
+  const [todos, setTodos] = useState([
+    {
+      id: 1,
+      title: "Walk the dog!",
+      deadline: "20/06/2023",
+      priority: "high",
+      done: false
+    }
+  ]);
 
   return (
-    <div>
-            <fieldset>
-              <legend><h3>Add a task:</h3></legend>
-              
-              <input
-                type="text"
-                placeholder="Add a task ..."
-                value={input}
-                onChange={(e) => setInput(e.target.value)}
-              ></input>
-              <button onClick={() => addTodo(input)}>Add</button>
-              <div className="List">
-              <ul>
-                {list.map((todo) => (
-                  <li key={todo.id}>&#10148;&nbsp;&nbsp;
-                    {todo.todo}
-                  <button className="closeButton" onClick={() => deleteTodo(todo.id)}>&times;</button>
-                  </li>
-                ))}
-              </ul>
-              </div>
-              
-            </fieldset>
-            
+    <div className="App">
+      <Form setTodos={setTodos} />
+      <DisplayToDos todos={todos} setTodos={setTodos} />
     </div>
   );
 }
-
-export default App;
