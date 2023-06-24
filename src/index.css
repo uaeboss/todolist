@@ -13,17 +13,8 @@ body {
   box-sizing: border-box;
 }
 
-.block {
-  text-align: center;
-  background: #cccccc;
-  border-radius: 3px;
-  padding: 3%;
-  color: black;
-  margin: 2% auto;
-  width: 500px;
-}
-.block > h2 {
-  text-align: center;
+textarea:focus, input:focus{
+  outline: none;
 }
 
 button {
