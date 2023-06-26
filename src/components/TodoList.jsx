@@ -5,10 +5,13 @@ const TodoList = () => {
   const [newTask, setNewTask] = useState('');
   const [editIndex, setEditIndex] = useState(-1);
 
+  /*input change */
   const handleInputChange = (event) => {
     setNewTask(event.target.value);
   };
 
+
+  /* add and edit task */
   const addTask = (event) => {
     event.preventDefault();
     if (newTask.trim() !== '') {
@@ -26,17 +29,21 @@ const TodoList = () => {
     }
   };
 
+  /*edit Task */
   const editTask = (index) => {
     setNewTask(tasks[index].text);
     setEditIndex(index);
   };
 
+
+  /* done / undone*/
   const toggleTaskStatus = (index) => {
     const updatedTasks = [...tasks];
     updatedTasks[index].done = !updatedTasks[index].done;
     setTasks(updatedTasks);
   };
 
+  /*delete task*/
   const deleteTask = (index) => {
     const updatedTasks = [...tasks];
     updatedTasks.splice(index, 1);
