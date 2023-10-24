@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 const TodoList = () => {
   const [tasks, setTasks] = useState([]);
   const [newTask, setNewTask] = useState('');
   const [editIndex, setEditIndex] = useState(-1);
 
-  /*input change */
+  /* input change */
   const handleInputChange = (event) => {
     setNewTask(event.target.value);
   };
@@ -29,21 +29,21 @@ const TodoList = () => {
     }
   };
 
-  /*edit Task */
+  /* edit Task */
   const editTask = (index) => {
     setNewTask(tasks[index].text);
     setEditIndex(index);
   };
 
 
-  /* done / undone*/
+  /* done/undone*/
   const toggleTaskStatus = (index) => {
     const updatedTasks = [...tasks];
     updatedTasks[index].done = !updatedTasks[index].done;
     setTasks(updatedTasks);
   };
 
-  /*delete task*/
+  /* delete task */
   const deleteTask = (index) => {
     const updatedTasks = [...tasks];
     updatedTasks.splice(index, 1);
@@ -89,7 +89,7 @@ const TodoList = () => {
             </div>
             <div className='right'>
             {editIndex === index ? (
-              <button onClick={() => addTask(e)}>Edit</button>
+              <button onClick={() => addTask(index)}>Edit</button>
             ) : (
               <button onClick={() => editTask(index)}>Edit</button>
             )}
